@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Module 5 Quiz | AI For All</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  background:#f4f6f8;
+  margin:0;
+  padding:40px;
+}
+
+.quiz-box{
+  max-width:700px;
+  background:#ffffff;
+  padding:35px;
+  margin:auto;
+  border-radius:8px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+h2{
+  text-align:center;
+  color:#2f2f7e;
+  margin-bottom:25px;
+}
+
+.question{
+  margin-bottom:20px;
+}
+
+.question p{
+  font-weight:600;
+  margin-bottom:10px;
+}
+
+label{
+  display:block;
+  margin:6px 0;
+  cursor:pointer;
+}
+
+.submit-btn{
+  margin-top:30px;
+  padding:12px 28px;
+  background:#16a34a;
+  color:#fff;
+  border:none;
+  border-radius:6px;
+  font-size:16px;
+  cursor:pointer;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.submit-btn:hover{
+  background:#15803d;
+}
+</style>
+</head>
+
+<body>
+
+<div class="quiz-box">
+  <h2>Module 5 Quiz – Deep Learning & Neural Networks</h2>
+
+  <div class="question">
+    <p>1. Deep Learning is a subset of which field?</p>
+    <label><input type="radio" name="q1"> Machine Learning</label>
+    <label><input type="radio" name="q1"> Web Development</label>
+    <label><input type="radio" name="q1"> Networking</label>
+  </div>
+
+  <div class="question">
+    <p>2. Neural Networks are inspired by?</p>
+    <label><input type="radio" name="q2"> Human brain</label>
+    <label><input type="radio" name="q2"> Computer hardware</label>
+    <label><input type="radio" name="q2"> Databases</label>
+  </div>
+
+  <div class="question">
+    <p>3. What does an artificial neuron use?</p>
+    <label><input type="radio" name="q3"> Weights and activation functions</label>
+    <label><input type="radio" name="q3"> Keyboard and mouse</label>
+    <label><input type="radio" name="q3"> Files and folders</label>
+  </div>
+
+  <div class="question">
+    <p>4. Which is a common deep learning application?</p>
+    <label><input type="radio" name="q4"> Image recognition</label>
+    <label><input type="radio" name="q4"> Text formatting</label>
+    <label><input type="radio" name="q4"> File compression</label>
+  </div>
+
+  <div class="question">
+    <p>5. Deep learning models usually require?</p>
+    <label><input type="radio" name="q5"> Large amounts of data</label>
+    <label><input type="radio" name="q5"> No data</label>
+    <label><input type="radio" name="q5"> Manual rules only</label>
+  </div>
+
+  <button class="submit-btn" onclick="submitQuiz()">Submit Quiz</button>
+</div>
+
+<script>
+function submitQuiz(){
+  localStorage.setItem("highestUnlockedModule","6");
+  alert("Module 5 Quiz completed successfully!\nModule 6 is now unlocked.");
+  window.location.href="module5.html";
+}
+</script>
+
+</body>
+</html>

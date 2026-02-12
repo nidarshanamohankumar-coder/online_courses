@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Module 6 Quiz | AI For All</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  background:#f4f6f8;
+  margin:0;
+  padding:40px;
+}
+
+.quiz-box{
+  max-width:700px;
+  background:#ffffff;
+  padding:35px;
+  margin:auto;
+  border-radius:8px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+h2{
+  text-align:center;
+  color:#2f2f7e;
+  margin-bottom:25px;
+}
+
+.question{
+  margin-bottom:20px;
+}
+
+.question p{
+  font-weight:600;
+  margin-bottom:10px;
+}
+
+label{
+  display:block;
+  margin:6px 0;
+  cursor:pointer;
+}
+
+.submit-btn{
+  margin-top:30px;
+  padding:12px 28px;
+  background:#16a34a;
+  color:#fff;
+  border:none;
+  border-radius:6px;
+  font-size:16px;
+  cursor:pointer;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.submit-btn:hover{
+  background:#15803d;
+}
+</style>
+</head>
+
+<body>
+
+<div class="quiz-box">
+  <h2>Module 6 Quiz – Natural Language Processing</h2>
+
+  <div class="question">
+    <p>1. NLP is mainly used to process?</p>
+    <label><input type="radio" name="q1"> Human language</label>
+    <label><input type="radio" name="q1"> Machine code</label>
+    <label><input type="radio" name="q1"> Hardware signals</label>
+  </div>
+
+  <div class="question">
+    <p>2. Tokenization refers to?</p>
+    <label><input type="radio" name="q2"> Breaking text into smaller units</label>
+    <label><input type="radio" name="q2"> Encrypting data</label>
+    <label><input type="radio" name="q2"> Storing files</label>
+  </div>
+
+  <div class="question">
+    <p>3. Which NLP technique reduces words to base form?</p>
+    <label><input type="radio" name="q3"> Lemmatization</label>
+    <label><input type="radio" name="q3"> Compilation</label>
+    <label><input type="radio" name="q3"> Formatting</label>
+  </div>
+
+  <div class="question">
+    <p>4. Chatbots are an application of?</p>
+    <label><input type="radio" name="q4"> Natural Language Processing</label>
+    <label><input type="radio" name="q4"> Computer Networks</label>
+    <label><input type="radio" name="q4"> Databases</label>
+  </div>
+
+  <div class="question">
+    <p>5. Sentiment analysis helps identify?</p>
+    <label><input type="radio" name="q5"> User emotions</label>
+    <label><input type="radio" name="q5"> Hardware errors</label>
+    <label><input type="radio" name="q5"> Program speed</label>
+  </div>
+
+  <button class="submit-btn" onclick="submitQuiz()">Submit Quiz</button>
+</div>
+
+<script>
+function submitQuiz(){
+  localStorage.setItem("highestUnlockedModule","7");
+  alert("Module 6 Quiz completed successfully!\nModule 7 is now unlocked.");
+  window.location.href="module6.html";
+}
+</script>
+
+</body>
+</html>

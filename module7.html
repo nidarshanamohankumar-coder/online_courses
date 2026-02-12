@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI For All | Module 7</title>
+
+<link rel="stylesheet" href="assets/css/common.css">
+
+<style>
+html{ scroll-behavior:smooth; }
+
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#f4f6f8;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.curriculum-layout{
+  display:flex;
+  min-height:100vh;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+  width:300px;
+  background:#ffffff;
+  border-right:1px solid #ddd;
+  padding:20px;
+  overflow-y:auto;
+}
+
+.sidebar h3{
+  font-size:16px;
+  margin-bottom:15px;
+}
+
+.module{
+  margin-bottom:15px;
+  position:relative;
+}
+
+.module-title{
+  font-weight:bold;
+  font-size:14px;
+  padding:8px;
+  background:#e8f5e9;
+}
+
+.module-title a{
+  text-decoration:none;
+  color:#222;
+  display:block;
+}
+
+/* CURRENT MODULE */
+.module.current .module-title{
+  background:#c7ead3;
+}
+
+/* SUB TOPICS */
+.module ul{
+  list-style:none;
+  padding-left:15px;
+  margin-top:8px;
+}
+
+.module ul li{
+  margin:6px 0;
+}
+
+.module ul li a{
+  text-decoration:none;
+  font-size:13px;
+  color:#333;
+}
+
+.module ul li a:hover{
+  color:#2f2f7e;
+  text-decoration:underline;
+}
+
+/* 🔒 LOCKED MODULE */
+.module.locked{
+  filter: blur(3px);
+  opacity:0.6;
+  pointer-events:none;
+}
+
+.module.locked::after{
+  content:"🔒 Complete previous module quiz";
+  position:absolute;
+  top:40%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:rgba(0,0,0,0.75);
+  color:#fff;
+  padding:6px 10px;
+  font-size:12px;
+  border-radius:6px;
+}
+
+/* ===== CONTENT ===== */
+.content-area{
+  flex:1;
+  padding:40px;
+}
+
+.content-box{
+  background:#ffffff;
+  padding:40px;
+  max-width:900px;
+  border-radius:6px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+.course-title{
+  font-size:26px;
+  color:#2f2f7e;
+  margin-bottom:20px;
+}
+
+.course-desc h2{
+  margin-top:40px;
+  scroll-margin-top:120px;
+}
+
+.course-desc p{
+  font-size:15px;
+  line-height:1.8;
+}
+
+/* QUIZ BUTTON */
+.quiz-btn{
+  margin-top:40px;
+  padding:14px 30px;
+  background:#2563eb;
+  color:#fff;
+  border:none;
+  border-radius:6px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.quiz-btn:hover{
+  background:#1e40af;
+}
+</style>
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="curriculum-layout">
+
+<!-- ===== SIDEBAR ===== -->
+<aside class="sidebar">
+  <h3>Course Outline</h3>
+
+  <div class="module"><div class="module-title"><a href="course_curriculum.html">Module 1: Introduction to AI For All</a></div></div>
+  <div class="module"><div class="module-title"><a href="module2.html">Module 2: Basics of Artificial Intelligence</a></div></div>
+  <div class="module"><div class="module-title"><a href="module3.html">Module 3: AI in Everyday Life</a></div></div>
+  <div class="module"><div class="module-title"><a href="module4.html">Module 4: Machine Learning Fundamentals</a></div></div>
+  <div class="module"><div class="module-title"><a href="module5.html">Module 5: Deep Learning & Neural Networks</a></div></div>
+  <div class="module"><div class="module-title"><a href="module6.html">Module 6: Natural Language Processing</a></div></div>
+
+  <!-- MODULE 7 (CURRENT) -->
+  <div class="module current">
+    <div class="module-title">Module 7: Computer Vision</div>
+    <ul>
+      <li><a href="#topic-7-1">7.1 Introduction to Computer Vision</a></li>
+      <li><a href="#topic-7-2">7.2 Image Processing Basics</a></li>
+      <li><a href="#topic-7-3">7.3 Object Detection</a></li>
+      <li><a href="#topic-7-4">7.4 Applications of Computer Vision</a></li>
+    </ul>
+  </div>
+
+  <!-- MODULE 8–10 (LOCKED) -->
+  <div class="module locked" id="module8"><div class="module-title"><a href="module8.html">Module 8: Ethical AI & Responsible Use</a></div></div>
+  <div class="module locked" id="module9"><div class="module-title"><a href="module9.html">Module 9: AI Tools & Applications</a></div></div>
+  <div class="module locked" id="module10"><div class="module-title"><a href="module10.html">Module 10: Future of AI & Careers</a></div></div>
+</aside>
+
+<!-- ===== CONTENT ===== -->
+<main class="content-area">
+  <div class="content-box">
+
+    <div class="course-title">Module 7: Computer Vision</div>
+
+    <div class="course-desc">
+      <h2 id="topic-7-1">7.1 Introduction to Computer Vision</h2>
+      <p>Computer Vision enables machines to interpret and understand visual information.</p>
+
+      <h2 id="topic-7-2">7.2 Image Processing Basics</h2>
+      <p>Image processing includes filtering, edge detection, and feature extraction.</p>
+
+      <h2 id="topic-7-3">7.3 Object Detection</h2>
+      <p>Object detection identifies and locates objects within images or videos.</p>
+
+      <h2 id="topic-7-4">7.4 Applications of Computer Vision</h2>
+      <p>Used in facial recognition, medical imaging, surveillance, and autonomous vehicles.</p>
+
+      <button class="quiz-btn" onclick="goToQuiz()">Take Module 7 Quiz</button>
+    </div>
+
+  </div>
+</main>
+
+</div>
+
+<div id="footer"></div>
+
+<script src="assets/js/include.js"></script>
+<script>
+loadHTML("header","header.html");
+loadHTML("footer","footer.html");
+
+function goToQuiz(){
+  window.location.href="quiz_module7.html";
+}
+
+/* UNLOCK LOGIC */
+document.addEventListener("DOMContentLoaded", ()=>{
+  let highest = parseInt(localStorage.getItem("highestUnlockedModule")) || 1;
+  for(let i=8;i<=10;i++){
+    const m=document.getElementById("module"+i);
+    if(i<=highest){
+      m.classList.remove("locked");
+      m.style.pointerEvents="auto";
+      m.style.filter="none";
+      m.style.opacity="1";
+    }
+  }
+});
+</script>
+
+</body>
+</html>
